@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Rut</th>
+                    <th>Nombre</th>
+                    <th>Categoria</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="employee:${employees}">
+                    <td th:text="${employee.idEmployees}"></td>
+                    <td th:text="${employee.name}"></td>
+                    <td th:text="${employee.id_category}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
