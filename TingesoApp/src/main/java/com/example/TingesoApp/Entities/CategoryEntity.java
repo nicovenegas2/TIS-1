@@ -16,10 +16,15 @@ public class CategoryEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(unique = true, nullable = false)
+    @Column(unique = true, nullable = false, name = "id_categories")
     Long id;
 
+    @Column(name = "name_category")
     String name;
 
-    float salary;
+    @Column(name = "salary_per_hour")
+    float salaryPerHour;
+
+    @Column(name = "salary_per_month")
+    float salaryPerMonth;
 }
